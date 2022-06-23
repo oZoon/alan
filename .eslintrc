@@ -1,0 +1,96 @@
+{
+  "plugins": ["prettier", "@typescript-eslint"],
+  "extends": ["airbnb-typescript", "react-app", "prettier"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {}
+    }
+  },
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "no-console": ["warn", { "allow": ["warn"] }],
+    "object-curly-spacing": ["warn", "always"],
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "args": "none"
+      }
+    ],
+    "@typescript-eslint/no-explicit-any": [
+      "warn",
+      {
+        "ignoreRestArgs": true
+      }
+    ],
+    "max-len": [
+      "warn",
+      {
+        "code": 80,
+        "tabWidth": 2,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreComments": true
+      }
+    ],
+    "no-plusplus": [
+      "warn",
+      {
+        "allowForLoopAfterthoughts": true
+      }
+    ],
+    "react/jsx-key": "warn",
+    "import/no-extraneous-dependencies": [
+      "warn",
+      {
+        "devDependencies": [
+          "**/*.test.js",
+          "**/*.test.jsx",
+          "**/*.test.ts",
+          "**/*.test.tsx",
+          "src/tests/**/*"
+        ]
+      }
+    ],
+    "import/extensions": [
+      "warn",
+      "never",
+      {
+        "ignorePackages": true,
+        "tsx": "never",
+        "ts": "never"
+      }
+    ],
+    "import/no-anonymous-default-export": [
+      "warn",
+      {
+        "allowArray": false,
+        "allowArrowFunction": false,
+        "allowAnonymousClass": false,
+        "allowAnonymousFunction": false,
+        "allowCallExpression": false,
+        "allowLiteral": false,
+        "allowObject": false
+      }
+    ],
+    "import/no-cycle": "off",
+    "prettier/prettier": "off",
+    "react/no-array-index-key": "off",
+    "react/jsx-props-no-spreading": "off",
+    "import/prefer-default-export": "off",
+    "react/jsx-boolean-value": "off",
+    "react/prop-types": "off",
+    "react/no-unescaped-entities": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-wrap-multilines": "off",
+    "react/destructuring-assignment": "off",
+    "jsx-quotes": [1, "prefer-double"],
+    "quotes": [1, "single", { "avoidEscape": true }]
+  }
+}
